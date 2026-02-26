@@ -1,0 +1,51 @@
+# DebateGPT Example Configuration
+# Copy this file to ~/.debategpt/config.yaml or ./config.yaml
+
+agents:
+  claude:
+    model: claude-sonnet-4-20250514
+    api_key: ${ANTHROPIC_API_KEY}
+    max_tokens: 4096
+  openai:
+    model: gpt-4o
+    api_key: ${OPENAI_API_KEY}
+    max_tokens: 4096
+  gemini:
+    model: gemini-2.5-pro
+    api_key: ${GEMINI_API_KEY}
+    max_tokens: 4096
+
+  # Example: OpenAI-compatible provider (Ollama local)
+  # llama-local:
+  #   provider: openai-compatible
+  #   base_url: http://localhost:11434/v1
+  #   model: llama3.2
+  #   api_key: ollama
+
+  # Example: DeepSeek
+  # deepseek:
+  #   provider: openai-compatible
+  #   base_url: https://api.deepseek.com/v1
+  #   model: deepseek-chat
+  #   api_key: ${DEEPSEEK_API_KEY}
+
+debate:
+  rounds: 2
+  max_rounds: 4
+  adaptive: true
+  critique_style: structured
+
+judge:
+  mode: separate         # "participant" | "separate" | "consensus"
+  # model: gemini-2.5-pro  # model for "separate" mode
+  # participant_agent: claude  # agent for "participant" mode
+
+output:
+  format: markdown
+  directory: ./brainstorms
+  include_transcript: false
+
+cost:
+  budget: 0              # USD, 0 = unlimited
+  show_estimates: true
+  warn_threshold: 0.50
