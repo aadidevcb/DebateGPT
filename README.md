@@ -30,4 +30,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-<p align="center">Made with love by <a href="https://www.linkedin.com/in/aadidevcb/">Aadidev</a></p>
+<p align="center">Made with ❤️ by <a href="https://www.linkedin.com/in/aadidevcb/">Aadidev</a></p>
